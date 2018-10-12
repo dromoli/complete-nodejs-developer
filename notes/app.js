@@ -6,12 +6,16 @@ const notes = require('./notes.js');
 
 var user = os.userInfo();
 
-console.log(user);
-
-fs.appendFile('greetings.txt', `Hello ${user.username}!`, function(err) {
+fs.appendFile('greetings.txt', `Hello ${user.username}! You are ${notes.age}.`, function(err) {
     if(err) {
         console.log('Unable to write to the file');
     } else {
         console.log('File successfully written');
     }
 });
+
+var res = notes.addNote();
+console.log(res);
+
+var addRes = notes.add(3, -9);
+console.log(addRes);
