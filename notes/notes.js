@@ -9,5 +9,6 @@ module.exports.addNote = () => {
 
 module.exports.add = (a, b) => {
     console.log('add');
+    console.log('adding');
     return a + b;
 }
